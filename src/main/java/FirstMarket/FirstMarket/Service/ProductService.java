@@ -1,6 +1,5 @@
 package FirstMarket.FirstMarket.Service;
 
-
 import FirstMarket.FirstMarket.Converter.ProductConverter;
 import FirstMarket.FirstMarket.Enum.Category;
 import FirstMarket.FirstMarket.Exception.sellerNotFoundException;
@@ -49,8 +48,6 @@ public class ProductService{
     public List<ProductResponseDto> getAllProductByCategory(Category productcategory){
 
         List<Product> products =productRepo.findAllByProductCategory(productcategory);
-
-
         List<ProductResponseDto> responseDtos=new ArrayList<>();
         for(Product pro:products)
         {
